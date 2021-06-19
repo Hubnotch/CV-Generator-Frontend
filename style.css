@@ -1,0 +1,251 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  background-color: #e5e5e5;
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+}
+
+li,
+a {
+  font-size: 1rem;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.98);
+}
+
+a.active {
+  color: #0ba0e5;
+}
+
+header {
+  width: 100%;
+  height: 93px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 10%;
+  background-color: #ffffff;
+}
+
+i.fas {
+  color: #c4c4c4;
+}
+.logo {
+  cursor: pointer;
+}
+
+.nav-links {
+  list-style: none;
+}
+
+.nav-links li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.nav-links li a {
+  transition: all 0.3s ease 0s;
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+.nav-links li a:hover {
+  border-bottom: 1px solid #29d7e9;
+}
+
+/* Hero section styles */
+.hero-section {
+  position: relative;
+  padding: 15px 10%;
+  margin-top: 4rem;
+  display: grid;
+  grid-column-gap: 2rem;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 1fr;
+}
+
+main.write-up {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100%;
+}
+
+.hero-image img {
+  height: 573px;
+  width: 448px;
+  object-fit: cover;
+}
+.write-up .dashed-end {
+  display: flex;
+}
+.write-up h4 {
+  color: #4a4633;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 28.4px;
+}
+.write-up span {
+  margin-left: 1.5rem;
+  height: 5px;
+  width: 37px;
+  border-radius: 0px;
+  background-color: #4a4633;
+}
+.dash-end .dash-container {
+  display: inline;
+  align-items: center;
+  justify-content: center;
+}
+
+.write-up .biggest-text h1 {
+  color: #4a4633;
+  font-family: Rubik;
+  font-size: 6rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 114px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+.write-up p {
+  margin-top: 4.5rem;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+
+button.btn {
+  text-align: left;
+  padding: 1rem 3rem;
+  margin-top: 6rem;
+  background: #0798e4;
+  color: #ffffff;
+  font-size: 1.15rem;
+  line-height: 1.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  border-radius: 7px;
+  outline: none;
+}
+
+section.floated-boxes {
+  padding: 15px 10%;
+  position: relative;
+  width: 100%;
+  text-align: right;
+  margin-bottom: 2rem;
+}
+
+div.ellipse {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  right: 27%;
+}
+
+div.square {
+  width: 17px;
+  height: 17px;
+  background: #33ebeb;
+  
+}
+
+section.floated-boxes .message-tips {
+  position: absolute;
+  top: -70px;
+  right: 10%;
+  height: 120px;
+  width: 195px;
+  color: #110808;
+  border-radius: 15px 15px 15px 0px;
+  background: #33ebeb;
+  text-align: center;
+  padding: 1.1rem;
+  box-shadow: 2px 4px 5px rgba(0,0,0,0.35);
+}
+
+div.message-tips q {
+  font-size: 0.85rem;
+}
+div.message-tips p {
+  margin-top: 2rem;
+  font-size: 0.6rem;
+}
+
+/* stand-out-template */
+.stand-out-template {
+  padding: 15px 10%;
+  margin-top: 4rem;
+  display: grid;
+  grid-column-gap: 3rem;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 1fr;
+  margin-bottom: 6rem;
+}
+
+.template-image img {
+  height: 573.8611450195312px;
+width: 448px;
+border-radius: 9px;
+
+}
+
+aside.template-text {
+ text-align: left;
+}
+aside.template-text h2{
+margin: 3rem 0;
+font-size: 3rem;
+font-style: normal;
+font-weight: 500;
+line-height: 3.563rem;
+letter-spacing: 0px;
+text-align: left;
+color: #4A4633;
+}
+
+aside.template-text h2 span{
+color: #0798e4;
+}
+aside.template-text p.intro{
+font-size: 1.2rem;
+font-style: normal;
+font-weight: 400;
+line-height: 1.875rem;
+letter-spacing: 0px;
+text-align: left;
+margin: 5rem 0;
+}
+aside.template-text p:last-child{
+font-size: 1.2rem;
+font-style: normal;
+font-weight: 400;
+line-height: 1.875rem;
+letter-spacing: 0px;
+text-align: left;
+margin: 5rem 0;
+color:#0798e4;
+}
+aside.template-text p:last-child > i{
+color:#0798e4;
+margin-left: 2rem;
+}
