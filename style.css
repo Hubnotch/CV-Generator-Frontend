@@ -258,8 +258,9 @@ margin-left: 2rem;
 section.getting-started {
   padding: 15px 10%;
 }
-section.getting-started h2{
-font-size: 2.89rem;
+section.getting-started h2,
+section.rating h2{
+font-size: 2rem;
 font-style: normal;
 font-weight: 500;
 line-height: 3.563rem;
@@ -346,3 +347,23 @@ div.center-logo img{
   width: 42px;
   height: 42px;
   }
+
+/* Rating and review section */
+section.rating{
+   padding: 15px 10%;
+}
+
+div.stars {
+  font-size: 1rem;
+}
+
+div.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 5px;
+    padding: 1rem 1.1rem;
+}
+
+div.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
