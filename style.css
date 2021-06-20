@@ -16,6 +16,7 @@ html {
 li,
 a {
   font-size: 1rem;
+  list-style: none;
   text-decoration: none;
   color: rgba(0, 0, 0, 0.98);
 }
@@ -257,7 +258,8 @@ section.getting-started {
   padding: 15px 10%;
 }
 section.getting-started h2,
-section.rating h2 {
+section.rating h2,
+h2.site-map-title {
   font-size: 2rem;
   font-style: normal;
   font-weight: 500;
@@ -339,7 +341,7 @@ div.center-logo {
   left: 50%;
   margin-left: -51px;
   margin-top: -51px;
-  transform: translateX(50%, -50%);
+ 
 }
 div.center-logo img {
   width: 42px;
@@ -439,4 +441,78 @@ div.comp-logo {
 
 button.move-up {
   margin-top: 3rem;
+}
+
+/* Site Map styles*/
+section.site-map {
+   padding: 15px 10%;
+   background: #0798e4;
+}
+main.maps{
+  display: flex;
+  text-align: left;
+  line-height: 2rem;
+}
+
+div.left-map {
+  margin-right: 6rem;
+}
+
+div.left-map ul li a{
+  color: #ffffff;
+  font-size: 1.15rem;
+}
+
+h5.news-letter-title {
+  font-size: 1rem;
+  color: #4a4633;
+  line-height: 1rem;
+}
+p.small-text {
+  font-size: 0.65rem;
+  color: #ffffff;
+}
+
+div.form-group {
+  display: flex;
+  width: 100%;
+  margin: 0.7rem 0;
+}
+
+button.subscribe {
+   padding: 10px 10px;
+  background: rgb(20, 97, 175);
+  outline: none;
+  border: none;
+  border-radius: 0 9px 9px 0;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+}
+
+input.input-field {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-radius: 9px 0 0 9px;
+}
+
+h4.contact {
+  font-size: 1.4rem;
+  color: #4a4633;
+}
+div.contacts p a {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* Footer styles */
+footer.footer {
+  text-align: center;
+  padding: 1.45rem 0;
+  background: #29d7e9;
+}
+footer.footer p{
+ font-size: 0.8rem;
 }
