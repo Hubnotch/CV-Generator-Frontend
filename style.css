@@ -144,3 +144,48 @@ section.hero-section .row {
     padding-left: 30px;
 }
 
+/*  template section */ 
+
+section.template-section {
+    padding: 30px;
+}
+section.template-section .row {
+    align-items: center;
+}
+section.template-section article {
+    width: 50%;
+}
+section.template-section article img {
+    max-width: 450px;
+    padding-right: 15px;
+}
+.template-text h2 {
+    font-size: 60px;
+    line-height: 60px;
+    color: #423f30;
+    font-weight: 500;
+}
+.template-text h2 span {
+    font-size: 55px;
+    color: #0798E4;
+}
+.template-text p {
+    margin-top: 30px;
+    line-height: 28px;
+    font-size: 18px;
+    font-weight: 400;
+    max-width: 500px;
+}
+.template-text a {
+    margin-top: 40px;
+    color: #0798E4;
+    display: inline-flex;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 22px;
+    align-items: center;
+}
+.template-text a:hover {
+    color: #037fc2;
+    transition: 0.3s ease all;
+}
