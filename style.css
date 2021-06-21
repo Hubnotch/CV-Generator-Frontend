@@ -244,3 +244,22 @@ section.get-started .row article .inner p {
     font-weight: 400;
 }
 
+/* testimonial section */
+section.testimonial-section {
+    padding: 30px;
+}
+section.testimonial-section  h3 {
+    font-size: 35px;
+    max-width: 350px;
+    line-height: 34px;
+    font-weight: 400;
+}
+section.testimonial-section h3 + .star {
+    width: 150px;
+    margin-top: 20px;
+}
+@media screen and (min-width: 996px) {
+    .hero-img {
+        max-height: auto;
+    }
+}
