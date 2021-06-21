@@ -1,0 +1,79 @@
+/* general styling */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+body {
+    background-color: #ecebeb;
+    font-family: 'Rubik', sans-serif;
+}
+.container {
+    max-width: 1170px;
+    margin: auto;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+a {
+    text-decoration: none;
+}
+
+
+/* header */
+
+header {
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+header .row {
+    max-width: 1170px;
+    padding: 0 30px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+div.logo {
+    padding-right: 25px;
+    display: inline-flex;
+    align-items: center;
+}
+div.logo span {
+    font-size: 22px;
+    font-weight: 600;
+    margin-left: 5px;
+    font-size: 22px;
+}
+nav ul {
+    display: inline;
+}
+nav ul li {
+    list-style-type: none;
+    display: inline;
+}
+nav ul li a {
+    padding: 22px 15px;
+    text-decoration: none;
+    color: #111;
+    text-transform: capitalize;
+    font-size: 18px;
+    font-weight: 400;
+    display: inline-block;
+}
+nav ul li a.active {
+    color: #0798E4
+}
+nav ul li a:hover {
+    color: #0798E4;
+    transition: 0.3s ease color;
+}
+nav ul li .user {
+    width: 25px;
+}
