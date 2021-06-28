@@ -242,6 +242,7 @@ section.template-section article > img {
     font-size: 48px;
     line-height: 57px;
     font-weight: 500;
+    padding: 0 20px;
 }
 .template-text h2 span {
     color: #0798E4;
@@ -254,6 +255,7 @@ section.template-section article > img {
     font-size: 18px;
     font-weight: 400;
     max-width: 500px;
+    padding: 0 20px;
 }
 .template-text a {
     margin-top: 132px;
@@ -264,6 +266,8 @@ section.template-section article > img {
     align-items: center;
     display: inline-flex;
     align-items: center;
+    padding: 0 20px;
+
 }
 .template-text a img{
     width: 40px;
@@ -275,7 +279,7 @@ section.template-section article > img {
 
 /* get started section */ 
 section.get-started {
-    padding: 200px 30px 30px;
+    padding: 243px 30px 0px;
 }
 section.get-started .row {
     position: relative;
@@ -285,20 +289,20 @@ section.get-started .row {
 }
 section.get-started .row .circle {
     position: absolute;
-    width: 120px;
-    height: 120px;
+    width: 130px;
+    height: 130px;
     border-radius: 50%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #E5E5E5;
+    background-color: #f8f8f8;
     z-index: 1;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 .vector-img {
-    width: 70px;
+    width: 80px;
 }
 section.get-started .row article:nth-child(odd) {
     width: 50%;
@@ -318,6 +322,7 @@ section.get-started .row article .inner {
 section.get-started .row article .inner img {
     margin-bottom: 22px;
     width: 40px;
+    height: 40px;
 }
 section.get-started .row article h3 {
     color: #423f30;
@@ -334,9 +339,8 @@ section.get-started .row article .inner p {
 
 /* testimonial section */
 section.testimonial-section {
-    padding: 200px 30px 30px;
+    padding: 300px 30px 0px;
 }
-
 section.testimonial-section h2 + .big-star {
     width: 302px;
     display: inline-block;
@@ -346,10 +350,12 @@ section.testimonial-section .slider {
     margin-top: 94px;
     position: relative;
     min-height: 400px;
-    overflow-x: hidden;
+    overflow: hidden;
+    border: 3px solid green;
+    width: 100%
 }
 section.testimonial-section .slider .slide {
-    width: 46%;
+    width: 47%;
     background-color: white;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0, 0.8);
     border-radius: 5px;
@@ -388,7 +394,6 @@ section.testimonial-section .slider article .testimonial-text {
 
 }
 
-
 /* logos section */
 section.logo-section {
     padding: 200px 30px 30px;
@@ -412,6 +417,7 @@ margin: 102px auto 0;
 
 /* media query*/
 @media screen and (max-width: 767px) {
+    /* header responsive */
     header {
         padding: 18px 0;
     }
@@ -439,6 +445,7 @@ margin: 102px auto 0;
         padding: 0;
         color: black;
     }
+    /* hero section responsive */
     .hero-text {
         text-align: center;
     }
@@ -450,6 +457,7 @@ margin: 102px auto 0;
     }
     .hero-text p {
         font-size: 15px;
+        margin: auto;
     }
     .hero-text h3 {
         font-size: 20px;
@@ -475,4 +483,100 @@ margin: 102px auto 0;
     .tips {
         display: none;
     }
+
+    /* template responsive */
+    section.template-section {
+        padding: 64px 30px 0px;
+    }
+    section.template-section article {
+        width: 100%;
+        text-align: center;
+    }
+    section.template-section article img{
+        margin: auto;
+        max-width: 100%;
+    }
+    section.template-section article:first-child {
+        margin-bottom: 39px;
+    }
+    section.template-section h2 {
+        padding: 0;
+        font-size: 30px;
+    }
+     section.template-section h2 span{
+        font-size: 30px;
+    }
+    section.template-section p {
+        font-size: 15px;
+        padding: 0;
+        max-width: 100%;
+    }
+    section.template-section a {
+        padding: 0;
+        margin-top: 40px;
+    }
+    section.template-section .template-text a img {
+        margin-left: 10px;
+        margin-bottom: -6px;
+    }
+
+    /* get started resonsiveness*/
+    section.get-started {
+        padding: 64px 30px 0px;
+    }
+    h2.section-title {
+        font-size: 30px;
+        text-align: center;
+        line-height: 34px;
+    }
+    section.get-started .row {
+        margin-top: 40px;
+    }
+    section.get-started .row article:nth-child(odd), section.get-started .row article:nth-child(even)  {
+        padding: 15px 0;
+        width: 100%;
+    }
+    section.get-started .row .circle {
+        display: none;
+    }
+    section.get-started .row article .inner img {
+        margin-bottom: 14px;
+        width: 23px;
+        height: 23px;
+    }
+    section.get-started .row article h3 {
+        color: #423f30;
+        font-size: 23px;
+        line-height: 17px;
+        font-weight:500;
+    }
+    section.get-started .row article p {
+        font-size: 15px;
+
+    }
+
+    /* testimonial responsive */
+    section.testimonial-section {
+    padding: 105px 30px 0px;
+}
+section.testimonial-section h2  {
+    font-size: 24px;
+    text-align: center;
+    margin: 5px auto ;
+}
+section.testimonial-section h2 + .big-star {
+    width: 150px;
+    display: block;
+    margin: auto;
+}
+section.testimonial-section .slider {
+    margin-top: 40px;
+    /* min-height: 400px; */
+    overflow-x: hidden;
+}
+section.testimonial-section .slider .slide {
+    position: absolute;
+    width: 100%;
+    
+}
 }

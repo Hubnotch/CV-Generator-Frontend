@@ -22,9 +22,14 @@ window.addEventListener("scroll", function() {
 
 // slides
 const slides = document.querySelectorAll(".slide");
-const btn = document.querySelector(".next")
+function move() {
     slides.forEach((slide, index)=> {
-        slide.style.left = `${index * 49}%`;
+        if(window.innerWidth < 767) {
+            slide.style.left = `${index * 100}%`;
+        }
+        else {
+        slide.style.left = `${index * 50}%`;
+        }
     })
 
 let counter = 0
@@ -39,6 +44,10 @@ function  carousel() {
     })
     console.log("Hello")
 }
+
+}
+setInterval(move, 1000);
+ 
 btn.addEventListener("click", function() {
     counter++
     carousel();
