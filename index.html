@@ -8,43 +8,49 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <!-- header -->
+    <header class="header">
+        <div class="row">
+            <div class="logo">
+                <img src="images/logo.png" alt="logo"><span>CV Ninja</span>
+            </div>
+
+            <!-- nav toggle -->
+      <div class="nav-toggle">
+        <span class="first"></span>
+        <span class="middle"></span>
+        <span class="last"></span>
+      </div>
+
+            <nav class="nav">
+                <ul>
+                    <li><a href="#" class="active">home</a></li>
+                    <li><a href="#">about us</a></li>
+                    <li><a href="#">templates</a></li>
+                    <li><a href="#"><img src="images/user-alt.png" alt="user" class="user"></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+   <!-- hero section -->
+   <section class="hero-section">
     <div class="container">
-        <header class="header">
-            <div class="row">
-                <div class="logo">
-                    <img src="images/logo.png" alt="logo"><span>CV Ninja</span>
-                </div>
-                <nav class="nav">
-                    <ul>
-                        <li><a href="#" class="active">home</a></li>
-                        <li><a href="#">about us</a></li>
-                        <li><a href="#">templates</a></li>
-                        <li><a href="#"></a></li>
-                        <li><img src="images/user-alt.png" alt="user" class="user"></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
+        <div class="tips">
+            <h4>This is a simple text for job tips</h4>
+            <a href="#"> click here for more tips</a>
+        </div>
+            <article class="hero-text">
+               <h3>Boost your chances to <span></span></h3>
+               <h1>Land that dream job</h1>
+               <p>Start by doing what's necessary, then what's possible, and suddenly you are doing the impossible. Let’s help you start the impossible</p>
+               <button type="button" class="create-cv-btn"><a href="#">Create CV now</a></button>
+            </article>
+    </div>
+    </section>
 
-
-            <!-- hero section -->
-        <section class="hero-section">
-            <div class="row">
-                <article>
-                  <div class="hero-text">
-                     <h3>Boost your chances to <span></span></h3>
-                     <h1>Land that dream job</h1>
-                     <p>Start by doing what's necessary, then what's possible, and suddenly you are doing the impossible. Let’s help you start the impossible</p>
-                     <button type="button"><a href="#">Create CV now</a></button>
-                  </div>
-                </article>
-                <article>
-         <img src="images/Mask Group.png" class="hero-img"
-         alt="hero-img">
-                </article>
-            </div>
-         </section>
-
+    <div class="container">
          <!-- template section -->
          <section class="template-section">
             <div class="row">
@@ -55,7 +61,7 @@
                     <div class="template-text">
                         <h2>Choose from our list of <span>STAND-OUT</span> templates.</h2>
                         <p>Egestas tristique suspendisse integer dolor, eu sit viverra. Placerat sagittis accumsan id eget cras felis. Aliquet rutrum at proin est. Elit et risus interdum bibendum condimentum.</p>
-                        <a href="#">See Template <span><img src="images/Vector.png" alt=""></span></i>
+                        <a href="templates.html">See Template <span><img src="images/Vector.png" alt=""></span></i>
                             </a>
                     </div>
                 </article>
@@ -172,9 +178,18 @@
     
 
     <!-- list of company section -->
-    <section class="list-of-companies">
-
+    <section class="logo-section"> 
+        <h2 class="section-title">Get hired by top companies</h2>  
+        <div class="row">
+            <img src="images/Group 25.png" alt="company-logos" class="company-logos">
+        </div>
+        <button type="button" class="create-cv-btn"><a href="#">Create CV now</a></button>
     </section>
+
+    <!-- footer section -->
+    <footer>
+
+    </footer>
     </div>
     <script src="app.js"></script>
 </body>
