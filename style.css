@@ -183,7 +183,7 @@ section.hero-section::before {
     border-radius: 10px 10px 10px 0;
 }
 .hero-section article.hero-text {
-    padding: 100px 30px 163px;
+    padding: 150px 30px 163px;
     width: 100%;
     min-height: 100vh;
     display: flex;
