@@ -8,16 +8,3 @@ navToggle.addEventListener("click", function() {
     nav.classList.toggle("open")
 })
 
-
-
-const header = document.querySelector(".header");
-
-window.addEventListener("scroll", function() {
-  if (this.window.scrollY > 100) {
-    header.classList.add("fixed");
-    nav.style.backgroundColor = "transparent"
-  } else {
-    header.classList.remove("fixed");
-    nav.style.backgroundColor = "rgba(225, 225, 225, 0.8)"
-  }
-});

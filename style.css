@@ -59,21 +59,12 @@ header {
     left: 0;
     width: 100%;
     z-index: 80;
-}
-header.fixed {
+    color: black;
     background-color: rgba(255, 255, 255, 0.8);
     position: fixed;
-    color: black;
 }
-.header.fixed .logo span {
-    color: black;
-  }
-header.fixed .nav-toggle span {
-    background-color: black;
-}
-header.fixed .nav ul li a {
-    color: black;
-}
+
+
 header .row {
     max-width: 1170px;
     margin: 0 auto;
@@ -91,7 +82,7 @@ div.logo span {
     font-weight: 600;
     margin-left: 5px;
     font-size: 22px;
-    color: white;
+    color: black;
 }
 
 
@@ -107,7 +98,7 @@ div.logo span {
 .nav ul li a {
     padding: 22px  60px 22px 0px;
     text-decoration: none;
-    color: white;
+    color: black;
     text-transform: capitalize;
     font-size: 18px;
     font-weight: 400;
@@ -143,7 +134,7 @@ div.logo span {
 margin: 2px 0;
 width: 20px;
 height: 2px;
-background-color: white;
+background-color: black;
 display: block;
 transition: 0.3s ease all;
 }
@@ -165,7 +156,8 @@ section.hero-section {
     background: url("images/Mask\ Group\ \(1\).png") center/cover no-repeat;
     position: relative;
     z-index: 1;
-    color: white
+    color: white;
+    min-height: 100vh;
 }
 section.hero-section .container {
     position: relative;
@@ -177,7 +169,7 @@ section.hero-section::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.8);
     z-index: -1;
 }
 .tips {
@@ -191,15 +183,18 @@ section.hero-section::before {
     border-radius: 10px 10px 10px 0;
 }
 .hero-section article.hero-text {
-    padding: 250px 30px 163px;
+    padding: 100px 30px 163px;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    min-height: 100vh;
+
 }
 .hero-text h3 {
     font-size: 24px;
+    margin-top: 60px;
     margin-bottom: 24px;
     font-weight: 700;
 }
@@ -222,7 +217,9 @@ section.hero-section::before {
     font-weight: 400;
     max-width: 500px;
     padding-top: 16px;
+    margin-bottom: 30px;
 }
+
 /*  template section */ 
 
 section.template-section {
@@ -496,14 +493,12 @@ footer article {
     }
     header .nav {
       width: 100%;
-     
       height: 0;
       transition: 0.3s ease all;
       overflow: hidden;
     }
     header .nav.open {
         height: 280px;
-        background-color: rgba(255, 255, 255, 0.8);
     }
 
     header .nav li {
