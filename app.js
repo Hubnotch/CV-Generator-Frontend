@@ -1,16 +1,21 @@
-// script for the password toggler
-const password = document.querySelector("#password");
-const passwordToggler = document.querySelector("#togglePassword");
-let toggle = false;
-passwordToggler.addEventListener("click", (e) => {
-  if (toggle === true) {
-    document.querySelector("#togglePassword").src = "images/icons/eye-open.png";
+const nav = document.querySelector("header .nav");
+const ul = document.querySelector("header .nav ul");
+const navToggle = document.querySelector("header .nav-toggle");
+
+
+navToggle.addEventListener("click", function() {
+    navToggle.classList.toggle("open")
+    nav.classList.toggle("open")
+})
+
+
+
+const header = document.querySelector(".header");
+
+window.addEventListener("scroll", function() {
+  if (this.window.scrollY > 100) {
+    header.classList.add("fixed");
   } else {
-    document.querySelector("#togglePassword").src =
-      "images/icons/eye-closed.png";
+    header.classList.remove("fixed");
   }
-  toggle = !toggle;
-  const type =
-    password.getAttribute("type") === "password" ? "text" : "password";
-  password.setAttribute("type", type);
 });
