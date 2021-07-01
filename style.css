@@ -172,15 +172,10 @@ section.hero-section::before {
     background-color: rgba(0, 0, 0, 0.8);
     z-index: -1;
 }
-.tips {
+.tool-tip {
     position: absolute;
-    bottom: 101px;
-    right: 145px;
-    background-color: #33EBEB;
-    width: 294px;
-    height: 205px;
-    display: none;
-    border-radius: 10px 10px 10px 0;
+    top: 45%;
+    right: 40px;
 }
 .hero-section article.hero-text {
     padding: 150px 30px 163px;
