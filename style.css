@@ -553,7 +553,7 @@ footer article {
     .tool-tip {
         position: absolute;
         top: 70%;
-        right: 0px;
+        right: -10px;
         width: 80px;
         height: 80px;
         transition: 0.3s linear all;
