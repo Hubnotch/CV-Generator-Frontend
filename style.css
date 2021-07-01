@@ -34,13 +34,18 @@ p {
     font-size: 18px;
     line-height: 30px;
 }
+.btn-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 60px;
+}
 .create-cv-btn {
     color: white;
     background: #0798E4;
     padding: 15px 35px;
     border: none;
     outline: none;
-    margin-top: 60px;
     border-radius: 16px;
     cursor: pointer;
     font-weight: 700;
@@ -176,11 +181,7 @@ section.hero-section::before {
     background-color: rgba(0, 0, 0, 0.8);
     z-index: -1;
 }
-.tool-tip {
-    position: absolute;
-    right: 20px;
-    top: 50%;
-}
+
 .hero-section article.hero-text {
     padding: 150px 30px 163px;
     width: 100%;
@@ -543,9 +544,6 @@ footer article {
         display: inline-block;
         margin-top: -10px;
     }
-    .tips {
-        display: none;
-    }
 
     /* template responsive */
     section.template-section {
@@ -670,11 +668,11 @@ section.testimonial-section .slider article .user {
     width: 60px;
     padding-right: 7px;
 }
-.tool-tip {
+/* .tool-tip {
     position: absolute;
     top: 80%;
     right: 20px;
     width: 60px;
     height: 60px;
-}
+} */
 }
