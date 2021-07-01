@@ -553,7 +553,7 @@ footer article {
     .tool-tip {
         position: absolute;
         top: 70%;
-        right: -20px;
+        right: 0px;
         width: 80px;
         height: 80px;
         transition: 0.3s linear all;
@@ -570,7 +570,7 @@ footer article {
         position: relative;
     }
     section.template-section article img{
-        margin: -150px auto auto;
+        margin: -90px auto auto;
         max-width: 100%;
     }
     section.template-section article:first-child {
