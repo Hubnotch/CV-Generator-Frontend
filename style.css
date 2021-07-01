@@ -670,9 +670,9 @@ section.testimonial-section .slider article .user {
 }
 .tool-tip {
     position: absolute;
-    top: 80%;
+    top: 68%;
     right: 20px;
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
 }
 }
