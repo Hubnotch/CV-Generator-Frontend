@@ -414,17 +414,10 @@ section.logo-section  h2.section-title {
     margin: auto;
     text-align: center;
 }
-section.logo-section .company-logos {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    margin-top: 80px;
+ section.logo-section .company-logos img {
     width: 100%;
-}
-section.logo-section .company-logo {
-    width: 260px;
-    padding: 30px;
+    display: block;
+    margin-top: 80px;
 }
 section.logo-section .create-cv-btn {
     display: block;
@@ -653,7 +646,7 @@ footer article {
     }
 
     /* testimonial responsive */
-    section.testimonial-section {
+    /* section.testimonial-section {
     padding: 105px 30px 0px;
     }
     section.testimonial-section h2  {
@@ -672,16 +665,12 @@ footer article {
     section.testimonial-section .slider .slide {
         width: 100%; 
         margin-bottom: 20px;
-    }
+    } */
 
-    /* logo section responsive */
     section.logo-section .company-logos img {
-        /* width: 80px;
-        padding: 30px; */
-        width: 100%;
-        display: block;
+       margin-top: 29px;
+       margin-bottom: 30px;
     }
-
     .social-links  img {
         width: 30px;
         height: 30px;
