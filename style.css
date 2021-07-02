@@ -53,6 +53,7 @@ p {
     line-height: 28px;
     width: 250px;
     transition: 0.3s linear all;
+    cursor: pointer;
 }
 .create-cv-btn:hover {
     transform: scale(1.05);
@@ -545,7 +546,7 @@ footer article {
         margin-left: 8px;
     }
     .create-cv-btn {
-        width: 200px;
+        width: 150px;
         padding: 6px 18px;
         margin: 40px auto;
     }
