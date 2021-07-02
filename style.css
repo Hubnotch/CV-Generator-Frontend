@@ -675,9 +675,11 @@ footer article {
     }
 
     /* logo section responsive */
-    section.logo-section .company-logo {
-        width: 80px;
-        padding: 30px;
+    section.logo-section .company-logos img {
+        /* width: 80px;
+        padding: 30px; */
+        width: 100%;
+        display: block;
     }
 
     .social-links  img {
