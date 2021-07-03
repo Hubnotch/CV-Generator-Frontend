@@ -185,7 +185,7 @@ section.hero-section::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.7);
     /* z-index: -3; */
 }
 
@@ -423,78 +423,14 @@ section.logo-section .create-cv-btn {
     display: block;
     margin: 80px auto 0px;
 }
+
 /* footer */
-/* footer {
+footer {
+    margin-top: 300px;
+    padding: 104px 30px 10px;
     background-color: #80C8EE;
 }
-footer .container {
-    padding: 70px 30px 10px;
-}
-footer article {
-    width: 50%;
-    padding-left: 10px;
 
-}
-.white {
-    color: white;
-    font-size: 14px;
-    margin: 10px 0 20px
-}
-.form-field {
-    display: inline-block;
-    margin-bottom: 113px;
-}
-.form-field input {
-    border: none;
-    padding: 12px;
-    border-radius: 5px 0 0 5px;
-}
-.form-field button {
-    border: none;
-    padding: 12px;
-    display: inline-block;
-    margin-left: -4px;
-    color: white;
-    background-color: #0798E4;
-    border-radius: 5px;
-}
-.bottom-nav {
-    display: flex;
-    margin-bottom: 100px;
-    justify-content: flex-start;
-}
-.bottom-nav ul {
-    width: 50%;
-    list-style-type: none;
-    width: 220px;
-}
-.bottom-nav ul li{
-    padding-bottom: 10px;
-    font-weight: 500;
-}
-.social-links {
-    padding: 30px 15px 0;
-    text-align: center;
-    margin-top: 40px;
-  }
-  .social-links  img {
-    width: 40px;
-    height: 40px;
-    display: inline-block;
-    padding: 4px;
-    margin-right: 5px;
-  }
-  footer h4 {
-      padding-top: 113px;
-      font-size: 35px;
-      text-align: center;
-      padding-bottom: 30px;
-  }
-  footer p.number {
-      color: white;
-      text-align: center;
-      font-size: 15px;
-  } */
 /* media query*/
 @media screen and (max-width: 767px) {
     .create-cv-btn {
@@ -528,6 +464,7 @@ footer article {
         padding: 0;
         color: black;
     }
+
     /* hero section responsive */
     .hero-text {
         text-align: center;
@@ -645,62 +582,17 @@ footer article {
 
     }
 
-    /* testimonial responsive */
-    /* section.testimonial-section {
-    padding: 105px 30px 0px;
+    /* logo section responsive */
+    section.logo-section {
+        padding: 80px 30px 0px;
     }
-    section.testimonial-section h2  {
-        font-size: 24px;
-        text-align: center;
-        margin: 5px auto ;
-    }
-    section.testimonial-section h2 + .big-star {
-        width: 150px;
-        display: block;
-        margin: auto;
-    }
-    section.testimonial-section .slider {
-        margin-top: 40px;
-    }
-    section.testimonial-section .slider .slide {
-        width: 100%; 
-        margin-bottom: 20px;
-    } */
-
     section.logo-section .company-logos img {
        margin-top: 29px;
        margin-bottom: 30px;
     }
-    .social-links  img {
-        width: 30px;
-        height: 30px;
-    }
-    .form-field input {
-        width: 60%;
-    }
-    footer h4 {
-        padding-top: 30px;
-        font-size: 20px;
-        text-align: center;
-        width: 100%;
-        padding-bottom: 0px;
-    }
-    footer article {
-        width: 100%;
-    }
-    .form-field, footer h4  {
-        display: inline-block;
-        margin-bottom: 60px;
-    }
-    .bottom-nav {
-        margin-bottom: 20px;
-    }
-    section.testimonial-section .slider article .name {
-        font-size: 18px;
-    }
-    section.testimonial-section .slider article .user {
-        width: 60px;
-        padding-right: 7px;
-    }
+    
+    /* footer responsive */
+    footer {
+        margin-top: 80px;
+}
 
-    }
