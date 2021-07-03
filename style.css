@@ -529,9 +529,11 @@ footer {
     section.template-section h2 {
         padding: 0;
         font-size: 30px;
+        line-height: 28px;
+        font-size: 24px;
     }
      section.template-section h2 span{
-        font-size: 30px;
+        font-size: 24px;
     }
     section.template-section p {
         font-size: 15px;
