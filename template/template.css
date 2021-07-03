@@ -160,8 +160,8 @@ div.logo span {
 
 /* hero */
 .hero {
-    padding: 90px 30px 0;
-    min-height: 400px;
+    padding: 150px 30px 0px;
+    min-height: 200px;
     background: url("../images/Rectangle\ 1862.png") center/cover no-repeat;
     position: relative;
     color: white;
@@ -181,25 +181,23 @@ div.logo span {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 400px;
     flex-direction: column;
+    max-width: 800px; 
+    margin: auto;
 }
 .hero-text h1 {
     font-size: 48px;
     margin: 0;
+    text-align: center;
 }
 .hero-text p {
-    max-width: 850px;
     margin: 36px auto 70px;
     text-align: center;
 }
 
 /* template section */
-.template-list .row {
-    width: 100%;
-    margin-bottom: 250px;
+section.template-list {
     padding: 0 30px 0;
-    border: 2px solid red;
 }
 .template-filter-btn {
     background-color: #eeeeee;
@@ -208,15 +206,18 @@ div.logo span {
     border-radius: 5px;
     margin-left: 30px;
     margin-bottom: 70px;
+    text-align: center;
 }
 .template-filter-btn button{
     color: #4A4633;
-    font-size: 14px;
+    font-size: 15px;
     line-height: 20px;
     border: none;
     background-color: transparent;
     margin-right: 60px;
     cursor: pointer;
+    font-weight: 600;
+    margin-bottom: 6px;
 }
 .template-filter-btn button.active {
     background-color: #0798E4;
@@ -224,15 +225,40 @@ div.logo span {
     padding: 8px 12px;
     border-radius: 5px;
 }
+.template-list .row {
+    width: 100%;
+    margin-bottom: 170px;
+    justify-content: space-between;
+}
 .template-list .row .template-image {
-    width: 320px;
-    margin-right: 65px;
+    width: 300px;
+    margin-right: 25px;
     margin-bottom: 60px;
     border-radius: 5px;
 }
-.template-list .row .template-image img {
+.template-list .default-btn {
+    color: white;
+    background-color:#0798E4;
+    width: 100%;
+    padding: 16px;
+    border: none;
+    border-radius: 16px;
+    font-weight: 500;
+    font-size: 20px;
+    margin-bottom: 50px;
+    text-align: center;
 }
-
+.template-list .discard-btn {
+    color: #DB4437;
+    background-color:transparent;
+    width: 100%;
+    padding: 16px;
+    border: none;
+    font-weight: 500;
+    font-size: 20px;
+    text-align: center;
+    /* margin-bottom: 96px; */
+}
 /* media query*/
 @media screen and (max-width: 767px) {
     .create-cv-btn {
@@ -266,4 +292,22 @@ div.logo span {
         padding: 0;
         color: black;
     }
-}
+
+    /* hero responsive */
+    .hero-text h1 {
+        font-size: 42px;
+    }
+    .hero-text p {
+        margin: 30px auto 30px;
+        font-size: 15px;
+    }
+
+    /* template btn */
+    .template-filter-btn {
+        margin-left: 0;
+    }
+    .template-filter-btn button{
+        margin-right: 20px;
+        margin-bottom: 20px;
+    }
+    }
