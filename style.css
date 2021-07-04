@@ -460,13 +460,16 @@ section.logo-section .create-cv-btn {
 /* footer */
 footer {
     margin-top: 300px;
-    padding: 104px 30px 10px;
+    padding: 104px 0px 10px;
     background-color: #80C8EE;
+}
+footer .container {
+    padding: 0 30px;
+    max-width: 1170px;
 }
 footer .row article {
     width: 50%;
 }
-
 footer .form-field h3 {
     font-size: 30px;
     margin-bottom: 8px;
