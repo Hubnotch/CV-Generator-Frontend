@@ -495,6 +495,7 @@ footer .form-field button {
     font-size: 14px;
     font-weight: 500;
     margin-left: -7px;
+    margin-bottom: 1px;
 }
 footer .bottom-nav {
     display: flex;
