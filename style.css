@@ -154,7 +154,7 @@ div.logo span {
     display: inline-block;
     line-height: 21px;
 }
-.nav ul li a.active {
+.nav ul li.active a {
     color: #0798E4
 }
 .nav ul li a:hover {
@@ -489,8 +489,8 @@ footer .form-field button {
     color: white;
     padding: 5px 10px;
     margin-top: 28px;
-    border-radius: 5px;
-    height: 39px;
+    border-radius: 0 5px 5px 0;
+    height: 38px;
     background-color: #0798E4;
     font-size: 14px;
     font-weight: 500;
@@ -514,23 +514,22 @@ footer .bottom-nav ul li a {
     font-weight: 600;
 }
 footer .social-links {
-    display: flex;
-    align-items: center;
-    margin-top: 80px;
-    justify-content: center;
+    text-align: center;
+    padding: 0;
+    margin-top: 70px;
 }
 footer .social-links img {
     margin-right: 10px;
 }
 footer .social-links img:last-child {
-    margin-bottom: -17px;
+    margin-bottom: -24px;
     margin-left: -15px;
 }
 footer  article:last-child {
     text-align: center;
 }
 footer  article:last-child h3{
-    margin-top: 55px;
+    margin-top: 45px;
     font-size: 24px;
     margin-bottom: 30px;
 }
@@ -726,6 +725,11 @@ footer .copyright {
             border-radius: 5px 0 0 5px;
             height: 30px;
         }
+        footer .form-field h3 {
+            font-size: 22px;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
         footer .form-field button {
             padding: 0 5px;
             height: 30px;
@@ -734,11 +738,19 @@ footer .copyright {
             width: 100%;
         }
         footer .social-links {
-            display: flex;
-            align-items: center;
             margin-top: 10px;
         }
         footer  article:last-child {
             text-align: center;
+        }
+        footer .bottom-nav {
+            display: flex;
+            margin-top: 50px;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+        }
+        footer .bottom-nav ul {
+            width: 100%
         }
     }
