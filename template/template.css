@@ -264,7 +264,7 @@ section.template-list {
     justify-content: flex-start;
 }
 .template-list .row .template-image {
-    width: 31%;
+    width: 30%;
     margin: 0  1.6% 60px;
     border-radius: 5px;
     cursor: pointer;
@@ -381,10 +381,6 @@ section.template-list {
     footer .social-links img {
         margin-right: 10px;
     }
-    footer .social-links img:last-child {
-        margin-bottom: -24px;
-        margin-left: -15px;
-    }
     footer  article:last-child {
         text-align: center;
     }
@@ -460,8 +456,13 @@ section.template-list {
         width: 100%;
         margin: 0  0 60px;
     }
-
-  
+    .template-list .row {
+        width: 100%;
+        margin-bottom: 70px;
+    }
+    .template-list .default-btn {
+        margin-bottom: 30px;
+    }
     /* footer responsive */
   
     footer {
@@ -492,6 +493,9 @@ section.template-list {
     }
     footer .row article {
         width: 100%;
+    }
+    footer .social-links img { 
+        width: 30px;
     }
     footer .social-links {
         margin-top: 10px;

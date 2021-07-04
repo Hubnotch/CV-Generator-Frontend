@@ -526,10 +526,6 @@ footer .social-links {
 footer .social-links img {
     margin-right: 10px;
 }
-footer .social-links img:last-child {
-    margin-bottom: -24px;
-    margin-left: -15px;
-}
 footer  article:last-child {
     text-align: center;
 }
