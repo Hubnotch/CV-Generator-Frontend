@@ -723,8 +723,9 @@ footer .copyright {
             border-radius: 5px 0 0 5px;
             height: 30px;
         }
-        footer .form-field input {
-            padding: 5px;
+        footer .form-field button {
+            padding: 0 5px;
+            height: 30px;
         }
         footer .row article {
             width: 100%;
