@@ -468,12 +468,12 @@ footer .row article {
 }
 
 footer .form-field h3 {
-    font-size: 18px;
-    margin-bottom: 0;
+    font-size: 30px;
+    margin-bottom: 8px;
 }
 footer .form-field p {
     color: white;
-    font-size: 15px;
+    font-size: 18px;
     line-height: 18px;
 }
 footer .form-field input {
@@ -501,16 +501,49 @@ footer .bottom-nav {
     margin-top: 50px;
 }
 footer .bottom-nav ul {
-    width: 200px;
+    width: 150px;
 }
 footer .bottom-nav ul li {
+    font-size: 24px;
     list-style-type: none;
-    margin-bottom: 18px;
+    margin-bottom: 20px;
 }
 footer .bottom-nav ul li a {
     color: #4A4633;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 600;
+}
+footer .social-links {
+    display: flex;
+    align-items: center;
+    margin-top: 80px;
+    justify-content: center;
+}
+footer .social-links img {
+    margin-right: 10px;
+}
+footer .social-links img:last-child {
+    margin-bottom: -17px;
+    margin-left: -15px;
+}
+footer  article:last-child {
+    text-align: center;
+}
+footer  article:last-child h3{
+    margin-top: 55px;
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+footer  article:last-child p {
+    color: white;
+    font-size: 15px;
+    line-height: 27px
+}
+footer .copyright {
+    text-align: center;
+    font-size: 14px;
+    padding-top: 30px;
+    padding-bottom: 10px;
 }
 /* media query*/
 @media screen and (max-width: 767px) {
@@ -673,10 +706,36 @@ footer .bottom-nav ul li a {
        margin-top: 29px;
        margin-bottom: 30px;
     }
-    
+   
     /* footer responsive */
-    footer {
-        margin-top: 80px;
-}
-
-}
+  
+        footer {
+            margin-top: 60px;
+            padding: 50px 30px 10px;
+            background-color: #80C8EE;
+        }
+        footer .form-field input {
+            border: none;
+            background-color: white;
+            padding: 5px;
+            margin-top: 20px;
+            width: 130px;
+            border-radius: 5px 0 0 5px;
+            height: 30px;
+        }
+        footer .form-field input {
+            padding: 5px;
+        }
+        footer .row article {
+            width: 100%;
+        }
+        footer .social-links {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+            justify-content: flex-start;
+        }
+        footer  article:last-child {
+            text-align: left;
+        }
+    }
