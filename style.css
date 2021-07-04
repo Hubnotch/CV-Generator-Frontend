@@ -714,6 +714,9 @@ footer .copyright {
             padding: 50px 30px 10px;
             background-color: #80C8EE;
         }
+        footer .form-field h3, footer .form-field p, footer .form-field {
+            text-align: center;
+        }
         footer .form-field input {
             border: none;
             background-color: white;
@@ -734,9 +737,8 @@ footer .copyright {
             display: flex;
             align-items: center;
             margin-top: 10px;
-            justify-content: flex-start;
         }
         footer  article:last-child {
-            text-align: left;
+            text-align: center;
         }
     }
