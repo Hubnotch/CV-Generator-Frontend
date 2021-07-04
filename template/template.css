@@ -264,8 +264,8 @@ section.template-list {
     justify-content: flex-start;
 }
 .template-list .row .template-image {
-    width: 330px;
-    margin: 0  10px;
+    width: 31%;
+    margin: 0  1.6%;
     margin-bottom: 60px;
     border-radius: 5px;
     cursor: pointer;
@@ -457,6 +457,9 @@ section.template-list {
         margin-bottom: 5px;
         font-size: 10px;
     }
+    .template-list .row .template-image {
+        width: 100%;
+        margin: 0;
     /* footer responsive */
   
     footer {
