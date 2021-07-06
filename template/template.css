@@ -129,6 +129,10 @@ div.logo span {
 .nav {
     padding: 0 30px;
 }
+.nav ul {
+    display: flex;
+    align-items: center;
+}
 .nav ul li {
     display: inline;
     list-style-type: none;

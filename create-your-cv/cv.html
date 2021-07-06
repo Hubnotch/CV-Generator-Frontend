@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create CV</title>
+    <link rel="stylesheet" href="cv.css">
+</head>
+<body>
+    <aside>
+        <div class="active" data-id="cv-title">
+        <img src="../images/pen.png" alt="pen">
+        </div>
+        
+        <div data-id="personal-info">
+        <img src="../images/user-alt (1).png" alt="pen">
+        </div>
+
+        <div data-id="career-objective">
+        <img src="../images/crosshairs.png" alt="pen">
+        </div>
+
+        <div>
+        <img src="../images/ps_work-case.png" alt="pen">
+        </div>
+
+        <div>
+        <img src="../images/cil_education.png" alt="pen">
+        </div>
+
+        <div>
+        <img src="../images/Vector (2).png" alt="pen">
+
+        </div>
+    </aside>
+    <div class="container">
+        <!-- cv tile -->
+       <div class="slide initial-slide" data-target="cv-title">
+        <h2>CV Title</h2>
+        <div class="form-field">
+           <input type="text">
+        </div>
+       </div>
+
+
+        <!-- personal info -->
+       <div class="slide" data-target="personal-info">
+        <h2>Personal Information</h2>
+        <p>Fill in only the information you would like to show on your CV. <span>Leave other fields empty.</span></p>
+
+        <form action="#" class="contact-form">
+            <div class="row">
+                <div class="form-field col-2">
+                  <label for="">First Name</label>
+                  <input type="text"/>
+                </div>
+                <div class="form-field col-2">
+                  <label for="">Last Name</label>
+                  <input type="text"/>
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-field col-1">
+                    <label for="">Profession</label>
+                    <input type="text"/>
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-field col-1">
+                    <label for="">Adddress</label>
+                    <input type="text"/>
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-field col-2">
+                  <label for="">Email</label>
+                  <input type="text"/>
+                </div>
+                <div class="form-field col-2">
+                  <label for="">Phone Number</label>
+                  <input type="text"/>
+                </div>
+              </div>
+        </form>
+       </div>
+
+        <!-- career objective -->
+        <div class="slide" data-target="career-objective">
+            <h2>Career Objective</h2>
+            <p>A CV career objective is a short, snappy introduction highlighting your career progress, achievements and skill set. </p>
+            <div class="form-field">
+                <label for="">Summary (optional)</label>
+               <textarea></textarea>
+            </div>
+           </div>
+
+    </div>
+    <script src="cv.js"></script>
+</body>
+</html>

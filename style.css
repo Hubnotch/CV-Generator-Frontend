@@ -139,6 +139,10 @@ div.logo span {
 .nav {
     padding: 0 30px;
 }
+.nav ul {
+    display: flex;
+    align-items: center;
+}
 .nav ul li {
     display: inline;
     list-style-type: none;
@@ -180,12 +184,12 @@ div.logo span {
     padding: 0 30px;
 }
 .nav-toggle span {
-margin: 2px 0;
-width: 20px;
-height: 2px;
-background-color: black;
-display: block;
-transition: 0.3s ease all;
+    margin: 2px 0;
+    width: 20px;
+    height: 2px;
+    background-color: black;
+    display: block;
+    transition: 0.3s ease all;
 }
 .nav-toggle span.middle {
     width: 13px;
