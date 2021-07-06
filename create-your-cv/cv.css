@@ -36,10 +36,12 @@ aside div.active {
 }
 .container {
     max-width: 1170px;
-    margin: auto;
-    padding: 60px 80px;
+    margin:  auto;
+    padding: 60px 80px 0;
     margin-left: 100px;
-    min-height: 100vh
+    min-height: 100vh;
+    position: relative;
+
 }
 h2 {
     font-size: 36px;
@@ -65,6 +67,28 @@ p span {
     color: #0798E4;
     font-size: 20px;
     line-height: 18px;
+}
+.navigation-btn {
+    position: absolute;
+    right: 30px;
+    bottom: 0;
+    text-align: right;
+}
+.navigation-btn button.prev {
+    color: #4A4633
+}
+.navigation-btn button {
+    color: #0798E4;
+    border: none;
+    padding: 20px 12px;
+    background-color: transparent;
+    font-weight: 600;
+    font-size: 20px;
+    cursor: pointer;
+}
+.navigation-btn button span {
+    font-size: 25px;
+    vertical-align: middle;
 }
 @keyframes fadein {
     0% {
