@@ -13,32 +13,131 @@ body {
     display: flex;
     flex-wrap: wrap;
 }
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 80;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.8);
+    position: fixed;
+}
+header .row {
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: auto;
+    padding: 20px 0;
+}
+div.logo {
+    display: inline-flex;
+    align-items: center;
+    padding: 0 30px;
+}
+div.logo span {
+    font-size: 22px;
+    font-weight: 600;
+    margin-left: 5px;
+    font-size: 22px;
+    color: black;
+}
+/* nav */
+.nav {
+    padding: 0 30px;
+}
+.nav ul {
+    display: flex;
+    align-items: center;
+}
+.nav ul li {
+    list-style-type: none;
+    padding-right: 40px;
+    font-size: 16px;
+    color: #4A4633;
+    font-weight: 400px;
+}
+.nav ul li:nth-child(2) {
+    color: #0798E4;
+}
+.nav ul li img{
+    width: 24px;
+    height: 24px;
+    margin-bottom: 4px;
+}
+.nav ul li button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 6px 12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: #29C943;
+    font-size: 20px;
+    height: 45px;
+    width: 192px;
+}
+.nav ul li button img {
+    margin-right: 5px;
+}
+.nav ul li a {
+    text-decoration: none;
+    color: #4A4633;
+    text-transform: capitalize;
+    font-size: 18px;
+    font-weight: 400;
+    display: inline-block;
+    line-height: 21px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+/* aside */
+
 aside {
-    width: 100px;
+    width: 103px;
     position: fixed;
     top: 0;
     left: 0;
-    height: calc(100vh - 60px);
+    height: calc(100vh - 90px);
     background-color: #979797;
-    margin-top: 60px;
+    z-index: 100;
+    margin-top: 90px;
 }
 aside div {
-    width: 100px;
-    height: calc((100vh - 60px) / 6  );
+    width: 103px;
+    /* height: 100px; */
+    height: calc((100vh - 90px) / 6  );
     display: flex;
     align-items: center;
     justify-content: center;
     transition: 0.5s ease all;
     cursor: pointer;
+    z-index: 100;
 }
 aside div.active {
    background-color: #0798E4;
 }
+/* svg {
+    width: 40px;
+    height: 40px;
+} */
+svg path {
+    fill: #c4c4c4;
+}
+aside div.active svg path{
+    fill: white;
+    stroke: white;
+ }
 .container {
     max-width: 1170px;
     margin:  auto;
-    padding: 60px 80px 0;
-    margin-left: 100px;
+    padding: 90px 120px 80px;
     min-height: 100vh;
     position: relative;
 
@@ -60,7 +159,7 @@ input {
 }
 p {
     font-size: 22px;
-    line-height: 28px;
+    line-height: 26px;
 }
 p span {
     display: block;
@@ -101,13 +200,16 @@ p span {
 .slide {
     min-height: calc(100vh - 60px);
     animation: fadein 0.5s linear;
+    max-width: 1170px;
+    margin: auto;
+    padding-top:  20px;
 }
 .form-field {
     padding-right: 25px;
   }
 .form-field label {
     display: block;
-    margin: 25px 0 5px;
+    margin: 25px 0 15px;
     font-size: 15px;
     font-weight: 500;
   }
@@ -128,13 +230,14 @@ textarea {
     height: 370px;
     background-color: #E5E5E5;
     border: none;
-    margin-top: 24px;
     outline: none;
     resize: none;
     padding: 20px 15px;
     font-size: 15px;
 }
-
+textarea.achievement-text {
+    height: 200px;   
+}
   @media screen and (max-width: 776px) {
       aside {
           width: 70px;
@@ -148,10 +251,6 @@ textarea {
       }
         aside div {
           width: 70px;
-        }
-        aside div img {
-            width: 40%;
-            margin: auto;
         }
         h2 {
             font-size: 30px;

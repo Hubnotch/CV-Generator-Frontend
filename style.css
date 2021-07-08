@@ -521,6 +521,10 @@ footer .bottom-nav ul li a {
     color: #4A4633;
     font-size: 16px;
     font-weight: 600;
+    transition: 0.3s ease all;
+}
+footer .bottom-nav ul li a:hover {
+    color: #0798E4;
 }
 footer .social-links {
     text-align: center;
