@@ -10,7 +10,7 @@ const prevBtn = document.querySelector(".prev");
 const overlay = document.querySelector(".overlay")
 const previewBtn = document.querySelector(".preview-cv");
 
-
+const title = document.querySelector("#title");
 const firstName = document.querySelector("#first-name");
 const lastName = document.querySelector("#last-name");
 const address = document.querySelector("#address");
@@ -18,6 +18,11 @@ const dob = document.querySelector("#dob");
 const profession = document.querySelector("#profession");
 const email = document.querySelector("#email");
 const phoneNumber = document.querySelector("#number");
+const position = document.querySelector("#position");
+const acheivement = document.querySelector("#acheivement");
+const year1 = document.querySelector("#year1");
+const year2 = document.querySelector("#year2");
+const skills = document.querySelector("#skills")
 
 
 let currentlySelected = 0;
@@ -112,8 +117,62 @@ prevBtn.addEventListener("click", function() {
 })
 
 
+// adding new Skills
 
+const newSkillBtn = document.querySelector(".add-new-skill");
+const skillSlide = document.querySelector(".skills-slide");
+
+newSkillBtn.addEventListener("click", function() {
+  const newSkill = document.createElement("div");
+  newSkill.classList.add("row");
+  newSkill.innerHTML = `<div class="form-field col-1">
+  <label for="">Skills, description (e.g Editing skills - excellent)</label>
+  <input type="text" id="skills">`
+  skillSlide.insertBefore(newSkill, newSkillBtn)
+
+})
+
+
+
+// get selectbox
+var selectBox1 = document.getElementById('year1');
+// loop through years
+for (let i = 2050; i >= 1900; i--) {
+    // create option element
+    var option = document.createElement('option');
+    // add value and text name
+    option.value = i;
+    option.innerHTML = i;
+    // add the option element to the selectbox
+    selectBox1.appendChild(option);
+}
+
+// get selectbox
+var selectBox2 = document.getElementById('year2');
+// loop through years
+for (let i = 2050; i >= 1900; i--) {
+    // create option element
+    var option = document.createElement('option');
+    // add value and text name
+    option.value = i;
+    option.innerHTML = i;
+    // add the option element to the selectbox
+    selectBox2.appendChild(option);
+}
+
+
+
+
+// preview page
 previewBtn.addEventListener("click", function() {
+  const allSkills = document.querySelectorAll(".skills-slide .row input");
+  let skillArr = [...allSkills].map(skill => {
+    return `<div class="skill-list">
+    <p>${skill.value}</p>
+    </div>`
+  })
+  console.log(allSkills)
+  skillArr = skillArr.join("")
   overlay.style.display = "flex";
   overlay.innerHTML = `   <div class="fixed-cv-header">
   <button class="close-preview">Close Preview</button>
@@ -170,10 +229,10 @@ previewBtn.addEventListener("click", function() {
   <div class="employement">
     <h3>Employement</h3>
     <div class="employement-row">
-      <div class="col-33">Nov 2005 — Sep 2010</div>
+      <div class="col-33">${year1.value} — ${year2.value}</div>
     <div class="col-66">
-      <p><b>Los Angelis University</b></p>
-      <p>Bachelor of Fine Arts in Graphic Design, GPA: 3.4/4.0</p>
+      <p><b>${position.value}</b></p>
+      <p>${acheivement.value}</p>
     </div>
     </div> 
   </div>
@@ -181,10 +240,9 @@ previewBtn.addEventListener("click", function() {
     <!-- skills -->
     <div class="skills">
       <div class="skills-row">
-        <div class="col-33">Nov 2005 — Sep 2010</div>
+        <div class="col-33"><b>Skills</b></div>
       <div class="col-66">
-        <p><b>Los Angelis University</b></p>
-        <p>Bachelor of Fine Arts in Graphic Design, GPA: 3.4/4.0</p>
+        </p>${skillArr}</p>
       </div>
       </div> 
     </div>
@@ -194,17 +252,20 @@ previewBtn.addEventListener("click", function() {
       <button type="button" class="close-preview-white">Close Preview</button>
     </div>
   </div>`
-  console.log(lastName, firstName);
 
+
+  // close preview Button
   const closeBtn = document.querySelector(".close-preview");
-const closeBtn2 = document.querySelector(".close-preview-white")
-closeBtn.addEventListener("click", function() {
-  overlay.style.display = "none";
-})
-closeBtn2.addEventListener("click", function() {
-  overlay.style.display = "none";
-})
-})
+  const closeBtn2 = document.querySelector(".close-preview-white")
+  closeBtn.addEventListener("click", function() {
+    overlay.style.display = "none";
+  })
+  closeBtn2.addEventListener("click", function() {
+    overlay.style.display = "none";
+  })
 
 
-// close preview button
+console.log(allSkills)
+
+
+})

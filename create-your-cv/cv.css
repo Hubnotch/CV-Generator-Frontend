@@ -480,3 +480,7 @@ textarea.achievement-text {
     .download-preview img {
         margin-right: 5px;
     }
+    .skill-list p {
+        list-style: none;
+        margin: 15px 0;
+    }
