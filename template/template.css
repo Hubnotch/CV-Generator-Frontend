@@ -9,7 +9,9 @@
       transform: rotate(360deg);
     }
   }
-
+a {
+    color: white;
+}
 /* loader */
 .loader {
   position: fixed;

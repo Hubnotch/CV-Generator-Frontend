@@ -61,7 +61,7 @@ h2.section-title {
     font-size: 48px;
     line-height: 57px;
     font-weight: 500;
-    max-width: 500px;
+    max-width: 600px;
 }
 p {
     font-size: 18px;
@@ -76,7 +76,7 @@ p {
 .create-cv-btn {
     color: white;
     background: #0798E4;
-    padding: 15px 35px;
+    padding: 12px 20px;
     border: none;
     outline: none;
     border-radius: 16px;
@@ -389,7 +389,6 @@ section.get-started .row article .inner p {
 /* testimonial section */
 section.testimonial-section {
     padding: 136px 30px 0px;
-    display: none;
 }
 section.testimonial-section h2 + .big-star {
     width: 302px;
