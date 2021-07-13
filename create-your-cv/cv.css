@@ -165,7 +165,7 @@ select {
     background-position-y: 5px;
     padding: 10px 25px;
 }
-.work-history {
+.add-work-history, .add-new-skill {
     width: 220px;
     margin: 80px auto 0;
     display: block;
@@ -387,7 +387,7 @@ textarea.achievement-text {
     .education h3, .employement h3 {
         padding-bottom: 25px;
     }
-    .education-row, .employement-row, .skills-row {
+    .education-row, .skills-row {
         display: flex;
         flex-wrap: wrap;
     }
@@ -409,13 +409,9 @@ textarea.achievement-text {
         width: 33%;
         padding-right: 15px;
     }
-    .col-33 {
+    .col-66 {
         padding-right: 15px;
-        width: 33%
-    }
-    .col-75 {
-        width: 66%;
-        padding: 15px;
+        width: 66%
     }
     .fixed-cv-header {
         position: absolute;

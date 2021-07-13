@@ -9,6 +9,7 @@ const prevBtn = document.querySelector(".prev");
 
 const overlay = document.querySelector(".overlay")
 const previewBtn = document.querySelector(".preview-cv");
+const previewBtn2 = document.querySelector(".previewBtn")
 
 const title = document.querySelector("#title");
 const firstName = document.querySelector("#first-name");
@@ -105,9 +106,6 @@ prevBtn.addEventListener("click", function() {
       nextBtn.style.display = "inline-flex";
       previewBtn.style.display = "none";
     }
-    else {
-      // prevBtn.style.display = "inline-flex"
-    }
     if (currentlySelected <= allSlides.length - 1) {
       nextBtn.style.display = "inline-flex";
       previewBtn.style.display = "none"
@@ -132,48 +130,98 @@ newSkillBtn.addEventListener("click", function() {
 
 })
 
+//additional work history
+const newWorkBtn = document.querySelector(".add-work-history");
+const workSlide = document.querySelector(".work-slide");
+newWorkBtn.addEventListener("click", function(){
+  const newWork = document.createElement("div");
+  newWork.classList.add(".main-row");
+  newWork.innerHTML = ` 
+   <div class="row">
+              <div class="form-field col-1">
+                <label for="">Position</label>
+                <input type="text" id="position" >
+            </div>
+            </div>
+  <div class="row">
+  <div class="form-field col-1">
+    <label for="">Achievements</label>
+   <textarea class="achievement-text" id="acheivement"></textarea>
+</div>
+</div>
 
+<div class="row">
+  <div class="form-field col-3">
+    <label for="">From</label>
+    <select name="" id="year1">
+      <option value=""></option>
+    </select>
+</div>
 
-// get selectbox
-var selectBox1 = document.getElementById('year1');
-// loop through years
-for (let i = 2050; i >= 1900; i--) {
-    // create option element
-    var option = document.createElement('option');
-    // add value and text name
-    option.value = i;
-    option.innerHTML = i;
-    // add the option element to the selectbox
-    selectBox1.appendChild(option);
-}
+<div class="form-field col-3">
+  <label for="">To</label>
+  <select name="" id="year2">
+    <option value=""></option>
+  </select>
+</div>
+</div>`
 
-// get selectbox
-var selectBox2 = document.getElementById('year2');
-// loop through years
-for (let i = 2050; i >= 1900; i--) {
-    // create option element
-    var option = document.createElement('option');
-    // add value and text name
-    option.value = i;
-    option.innerHTML = i;
-    // add the option element to the selectbox
-    selectBox2.appendChild(option);
-}
+workSlide.insertBefore(newWork, newWorkBtn)
 
-
+} )
 
 
 // preview page
 previewBtn.addEventListener("click", function() {
+  overlay.style.display = "flex";
+ 
+  // call show preview function
+  showPreviewPage();
+
+  // close preview Button
+  closePreview()
+})
+previewBtn2.addEventListener("click", function(e) {
+  // e.preventDefault();
+  // call show preview function
+
+  showPreviewPage();
+
+ console.log("Hello")
+})
+
+
+function showPreviewPage() {
   const allSkills = document.querySelectorAll(".skills-slide .row input");
   let skillArr = [...allSkills].map(skill => {
     return `<div class="skill-list">
     <p>${skill.value}</p>
     </div>`
   })
-  console.log(allSkills)
   skillArr = skillArr.join("")
-  overlay.style.display = "flex";
+
+
+  const allWorks = document.querySelectorAll(".main-row");
+  let workArr = [...allWorks].map(work => {
+    return `<div class="col-33">${year1.value} — ${year2.value}</div>
+    <div class="col-66">
+      <p><b>${position.value}</b></p>
+      <p>${acheivement.value}</p>
+    </div>
+    </div> 
+  </div>
+
+    <!-- skills -->
+    <div class="skills">
+      <div class="skills-row">
+        <div class="col-33"><b>Skills</b></div>
+      <div class="col-66">
+        </p>${skillArr}</p>
+      </div>
+      </div> `
+  })
+workArr = workArr.join()
+
   overlay.innerHTML = `   <div class="fixed-cv-header">
   <button class="close-preview">Close Preview</button>
 </div>
@@ -229,22 +277,7 @@ previewBtn.addEventListener("click", function() {
   <div class="employement">
     <h3>Employement</h3>
     <div class="employement-row">
-      <div class="col-33">${year1.value} — ${year2.value}</div>
-    <div class="col-66">
-      <p><b>${position.value}</b></p>
-      <p>${acheivement.value}</p>
-    </div>
-    </div> 
-  </div>
-
-    <!-- skills -->
-    <div class="skills">
-      <div class="skills-row">
-        <div class="col-33"><b>Skills</b></div>
-      <div class="col-66">
-        </p>${skillArr}</p>
-      </div>
-      </div> 
+      ${workArr}
     </div>
 
     <div class="bottom-buttons">
@@ -254,7 +287,9 @@ previewBtn.addEventListener("click", function() {
   </div>`
 
 
-  // close preview Button
+}
+
+function closePreview () {
   const closeBtn = document.querySelector(".close-preview");
   const closeBtn2 = document.querySelector(".close-preview-white")
   closeBtn.addEventListener("click", function() {
@@ -263,9 +298,4 @@ previewBtn.addEventListener("click", function() {
   closeBtn2.addEventListener("click", function() {
     overlay.style.display = "none";
   })
-
-
-console.log(allSkills)
-
-
-})
+}

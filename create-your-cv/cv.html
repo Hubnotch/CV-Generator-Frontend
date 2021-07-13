@@ -24,14 +24,14 @@
                     <img src="../images/fluent_document-edit-16-regular.png" alt="">
                     Editor
                   </a>
-                  <li>
+                  <li class="previewBtn">
                     <a href="">
                     <img src="../images/grommet-icons_template.png" alt="">
                     Preview
                   </a>
                   </li>
                   <li>
-                    <button type="button"><img src="../images//cloud-download-alt (1).png" alt="">Downlaod</button>
+                    <button type="button"><img src="../images//cloud-download-alt (1).png" alt="">Download</button>
                   </li>
               </ul>
           </nav>
@@ -165,40 +165,44 @@
            </div>
 
               <!-- Work History -->
-        <div class="slide" data-target="work-history">
+        <div class="slide work-slide" data-target="work-history">
           <h2>Work History</h2>
           <p>List your work experience, add different positions you held and describe your responsibilities. Don’t forget to highlight your biggest achievements!   </p>
-          <div class="row">
-            <div class="form-field col-1">
-              <label for="">Position</label>
-              <input type="text" id="position" >
-          </div>
-          </div>
+          
 
-          <div class="row">
-            <div class="form-field col-1">
-              <label for="">Achievements</label>
-             <textarea class="achievement-text" id="acheivement"></textarea>
-          </div>
-          </div>
-
-          <div class="row">
+          <div class="main-row">
+            <div class="row">
+              <div class="form-field col-1">
+                <label for="">Position</label>
+                <input type="text" id="position" >
+            </div>
+            </div>
+  
+            <div class="row">
+              <div class="form-field col-1">
+                <label for="">Achievements</label>
+               <textarea class="achievement-text" id="acheivement"></textarea>
+            </div>
+            </div>
+  
+            <div class="row">
+              <div class="form-field col-3">
+                <label for="">From</label>
+                <select name="" id="year1">
+                  <option value=""></option>
+                </select>
+            </div>
+  
             <div class="form-field col-3">
-              <label for="">From</label>
-              <select name="" id="year1">
+              <label for="">To</label>
+              <select name="" id="year2">
                 <option value=""></option>
               </select>
           </div>
-
-          <div class="form-field col-3">
-            <label for="">To</label>
-            <select name="" id="year2">
-              <option value=""></option>
-            </select>
-        </div>
-        </div>
-
-        <button class="work-history">Add Work History</button>
+          </div>
+  
+          </div>
+        <button class="add-work-history">Add Work History</button>
          </div>
 
 
@@ -225,7 +229,7 @@
               <input type="text" id="skills">
           </div>
          </div>
-         <button class="work-history add-new-skill">Add New Skill</button>
+         <button class="add-new-skill">Add New Skill</button>
       </div>
 
      
