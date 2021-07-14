@@ -21,8 +21,6 @@ const email = document.querySelector("#email");
 const phoneNumber = document.querySelector("#number");
 const position = document.querySelector("#position");
 const acheivement = document.querySelector("#acheivement");
-const year1 = document.querySelector("#year1");
-const year2 = document.querySelector("#year2");
 const skills = document.querySelector("#skills")
 
 
@@ -153,14 +151,14 @@ newWorkBtn.addEventListener("click", function(){
 <div class="row">
   <div class="form-field col-3">
     <label for="">From</label>
-    <select name="" id="year1">
+    <select name="" class="year">
       <option value=""></option>
     </select>
 </div>
 
 <div class="form-field col-3">
   <label for="">To</label>
-  <select name="" id="year2">
+  <select name="" class="year">
     <option value=""></option>
   </select>
 </div>
@@ -169,6 +167,31 @@ newWorkBtn.addEventListener("click", function(){
 workSlide.insertBefore(newWork, newWorkBtn)
 
 } )
+
+// get selectbox
+var selectBox = document.querySelectorAll('.year');
+// loop through years
+
+  for(let i = 0; i < selectBox.length; i++) {
+    for(let j= 2030; j >= 2006; j--) {
+      let option = document.createElement("option");
+      option.value = j;
+      option.innerHTML = j;
+      selectBox[i].appendChild(option)
+    }
+
+  }
+
+// for (var i = 2050; i >= 1900; i--) {
+//     // create option element
+//     var option = document.createElement('option');
+//     // add value and text name
+//     option.value = i;
+//     option.innerHTML = i;
+//     // add the option element to the selectbox
+//     // selectBox.appendChild(option);
+// }
+
 // preview page
 previewBtn.addEventListener("click", function() {
   overlay.style.display = "flex";
@@ -286,9 +309,10 @@ workArr = workArr.join()
       <button type="button" class="close-preview-white">Close Preview</button>
     </div>
   </div>`
-
-
 }
+
+
+
 
 function closePreview () {
   const closeBtn = document.querySelector(".close-preview");
