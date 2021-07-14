@@ -22,6 +22,8 @@ const phoneNumber = document.querySelector("#number");
 const position = document.querySelector("#position");
 const acheivement = document.querySelector("#acheivement");
 const skills = document.querySelector("#skills")
+const institution = document.querySelector("#institution")
+const qualification = document.querySelector("#qualification")
 
 
 let currentlySelected = 0;
@@ -168,6 +170,53 @@ workSlide.insertBefore(newWork, newWorkBtn)
 
 } )
 
+// additional education history
+
+const newEduBtn = document.querySelector(".add-education-history");
+const eduSlide = document.querySelector(".education-slide");
+newEduBtn.addEventListener("click", function() {
+  const newEdu = document.createElement("div");
+  newEdu.classList.add(".main-edu-row");
+  newEdu.innerHTML = `<div class="row">
+  <div class="form-field col-1">
+    <label for="">Name of institution</label>
+    <input type="text">
+  </div>
+</div>
+
+<div class="row">
+  <div class="form-field col-1">
+    <label for="">Qualification</label>
+    <select name="" id="" class="col-1">
+      <option value=""></option>
+      <option value="">Postgraduate</option>
+      <option value="">Undergraduate</option>
+      <option value="">SSCE</option>
+      <option value="">Primary School Leaving Certificate</option>
+      <option value="">Others</option>
+    </select>
+  </div>
+</div>
+
+<div class="row">
+  <div class="form-field col-3">
+    <label for="">From</label>
+    <select name="" id="" class="year">
+      <option value=""></option>
+    </select>
+  </div>
+
+  <div class="form-field col-3">
+    <label for="">To</label>
+    <select name="" id="" class="year">
+      <option value=""></option>
+    </select>
+  </div>
+</div>`
+
+eduSlide.insertBefore(newEdu, newEduBtn)
+})
+
 // get selectbox
 var selectBox = document.querySelectorAll('.year');
 // loop through years
@@ -182,35 +231,18 @@ var selectBox = document.querySelectorAll('.year');
 
   }
 
-// for (var i = 2050; i >= 1900; i--) {
-//     // create option element
-//     var option = document.createElement('option');
-//     // add value and text name
-//     option.value = i;
-//     option.innerHTML = i;
-//     // add the option element to the selectbox
-//     // selectBox.appendChild(option);
-// }
 
 // preview page
 previewBtn.addEventListener("click", function() {
   overlay.style.display = "flex";
- 
-  // call show preview function
   showPreviewPage();
-
-  // close preview Button
   closePreview()
 })
 
 previewBtn2.addEventListener("click", function(e) {
   e.preventDefault();
   overlay.style.display = "flex";
- 
-  // call show preview function
   showPreviewPage();
-
-  // close preview Button
   closePreview();
 })
 
@@ -227,7 +259,8 @@ function showPreviewPage() {
 
   const allWorks = document.querySelectorAll(".main-row");
   let workArr = [...allWorks].map(work => {
-    return `<div class="col-33">${year1.value} — ${year2.value}</div>
+    return `
+    <div class="col-33">1998 - 1884</div>
     <div class="col-66">
       <p><b>${position.value}</b></p>
       <p>${acheivement.value}</p>
@@ -244,8 +277,20 @@ function showPreviewPage() {
       </div>
       </div> `
   })
-workArr = workArr.join()
+workArr = workArr.join();
 
+const allEdu = document.querySelectorAll(".main-edu-row");
+let eduArray = [...allEdu].map(edu => {
+  return  `
+  <div class="col-33">Nov 2005 — Sep 2010</div>
+  <div class="col-66">
+    <p><b>${institution.value}</b></p>
+    <p>${qualification.value}</p>
+  </div>
+  `
+});
+eduArray.join();
+console.log(eduArray)
   overlay.innerHTML = `   <div class="fixed-cv-header">
   <button class="close-preview">Close Preview</button>
 </div>
@@ -277,25 +322,16 @@ workArr = workArr.join()
       </div>
   </div>
 
+<div>
 
   <!-- education -->
   <div class="education">
     <h3>Education</h3>
     <div class="education-row">
-      <div class="col-33">Nov 2005 — Sep 2010</div>
-    <div class="col-66">
-      <p><b>Los Angelis University</b></p>
-      <p>Bachelor of Fine Arts in Graphic Design, GPA: 3.4/4.0</p>
-    </div>
-    <div class="col-33">Nov 2005 — Sep 2010</div>
-    <div class="col-66">
-      <p><b>Los Angelis University</b></p>
-      <p>Bachelor of Fine Arts in Graphic Design, GPA: 3.4/4.0</p>
-    </div>
-    </div>
+     ${eduArray}
   </div>
 
-
+</div>
   
   <!-- employement -->
   <div class="employement">
@@ -303,7 +339,7 @@ workArr = workArr.join()
     <div class="employement-row">
       ${workArr}
     </div>
-
+</div>
     <div class="bottom-buttons">
       <button type="button" class="download-preview"><img src="../images//cloud-download-alt (1).png" alt="">Downlaod</button>
       <button type="button" class="close-preview-white">Close Preview</button>

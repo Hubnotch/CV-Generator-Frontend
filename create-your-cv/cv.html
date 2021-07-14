@@ -207,32 +207,45 @@
 
 
              <!--education -->
-        <div class="slide" data-target="education">
+        <div class="slide education-slide" data-target="education">
           <h2>Education</h2>
           <p>Add different schools, colleges and universities that you attended. Describe them by adding information about your majors or extracurricular activities.</p>
-          <div class="row">
-            <div class="form-field col-1">
-              <label for="">Name of institutution</label>
-             <select name="" id="" class="col-1"></select>
+          <div class="main-edu-row">
+            <div class="row">
+              <div class="form-field col-1">
+                <label for="">Name of institutution</label>
+                <input type="text" id="institution">
+              </div>
             </div>
-          </div>
-
-          <div class="row">
-            <div class="form-field col-1">
-              <label for="">Qualification</label>
-              <select name="" id="" class="col-1"></select>
+  
+            <div class="row">
+              <div class="form-field col-1">
+                <label for="">Qualification</label>
+                <select name="" id="qualification" class="col-1">
+                  <option value=""></option>
+                  <option value="">Postgraduate</option>
+                  <option value="">Undergraduate</option>
+                  <option value="">SSCE</option>
+                  <option value="">Primary School Leaving Certificate</option>
+                  <option value="">Others</option>
+                </select>
+              </div>
             </div>
-          </div>
-
-          <div class="row">
-            <div class="form-field col-3">
-              <label for="">From</label>
-              <select name="" id=""></select>
-            </div>
-
-            <div class="form-field col-3">
-              <label for="">To</label>
-              <select name="" id=""></select>
+  
+            <div class="row">
+              <div class="form-field col-3">
+                <label for="">From</label>
+                <select name="" id="" class="year">
+                  <option value=""></option>
+                </select>
+              </div>
+  
+              <div class="form-field col-3">
+                <label for="">To</label>
+                <select name="" id="" class="year">
+                  <option value=""></option>
+                </select>
+              </div>
             </div>
           </div>
           <button class="add-education-history">Add Education History</button>
