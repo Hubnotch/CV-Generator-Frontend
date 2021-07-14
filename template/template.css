@@ -457,6 +457,10 @@ section.template-list {
     transition: 0.3s ease all;
     overflow: hidden;
     }
+    header .nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
     header .nav.open {
         height: 280px;
     }

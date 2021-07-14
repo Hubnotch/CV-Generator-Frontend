@@ -169,8 +169,6 @@ newWorkBtn.addEventListener("click", function(){
 workSlide.insertBefore(newWork, newWorkBtn)
 
 } )
-
-
 // preview page
 previewBtn.addEventListener("click", function() {
   overlay.style.display = "flex";
@@ -181,13 +179,16 @@ previewBtn.addEventListener("click", function() {
   // close preview Button
   closePreview()
 })
-previewBtn2.addEventListener("click", function(e) {
-  // e.preventDefault();
-  // call show preview function
 
+previewBtn2.addEventListener("click", function(e) {
+  e.preventDefault();
+  overlay.style.display = "flex";
+ 
+  // call show preview function
   showPreviewPage();
 
- console.log("Hello")
+  // close preview Button
+  closePreview();
 })
 
 

@@ -17,26 +17,30 @@ window.addEventListener("load", function() {
 });
 
 
-// filter template items
-const filterBtns = document.querySelectorAll(".template-filter-btn button");
-const filterItems = document.querySelector(".template-list .row").children;
+// testimonial slider
 
-for (let i = 0; i < filterBtns.length; i++) {
- filterBtns[i].addEventListener("click", function() {
-    for (let j = 0; j < filterBtns.length; j++) {
-      filterBtns[j].classList.remove("active");
-    }
-    this.classList.add("active");
-
-    const target = this.getAttribute("data-target");
-    for (let j = 0; j < filterItems.length; j++) {
-      filterItems[j].style.display = "none";
-      if (filterItems[j].getAttribute("data-id") === target) {
-        filterItems[j].style.display = "block";
-      }
-      if (target === "all") {
-        filterItems[j].style.display = "block";
-      }
+const allSlides = document.querySelectorAll(".testimonial-section .row .slide");
+const nextBtn = document.querySelector(".testimonial-section .next")
+const prevBtn = document.querySelector(".testimonial-section .prev")
+let currentlySelected = 0;
+nextBtn.addEventListener("click", function() {
+  currentlySelected++;
+  if(currentlySelected > allSlides.length - 1) {
+    currentlySelected = 0;
   }
- })
-}
+  for(let i = 0; i < allSlides.length; i++) {
+    allSlides[i].classList.remove("active")
+  }
+  allSlides[currentlySelected].classList.add("active")
+})
+
+prevBtn.addEventListener("click", function() {
+  currentlySelected--;
+  if(currentlySelected < 0) {
+    currentlySelected = allSlides.length - 1;
+  }
+  for(let i = 0; i < allSlides.length; i++) {
+    allSlides[i].classList.remove("active")
+  }
+  allSlides[currentlySelected].classList.add("active")
+})
