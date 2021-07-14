@@ -24,14 +24,7 @@ const nextBtn = document.querySelector(".testimonial-section .next")
 const prevBtn = document.querySelector(".testimonial-section .prev")
 let currentlySelected = 0;
 nextBtn.addEventListener("click", function() {
-  currentlySelected++;
-  if(currentlySelected > allSlides.length - 1) {
-    currentlySelected = 0;
-  }
-  for(let i = 0; i < allSlides.length; i++) {
-    allSlides[i].classList.remove("active")
-  }
-  allSlides[currentlySelected].classList.add("active")
+  showNext();
 })
 
 prevBtn.addEventListener("click", function() {
@@ -44,3 +37,17 @@ prevBtn.addEventListener("click", function() {
   }
   allSlides[currentlySelected].classList.add("active")
 })
+
+setInterval(function() {
+  showNext()
+}, 3000)
+function showNext () {
+  currentlySelected++;
+  if(currentlySelected > allSlides.length - 1) {
+    currentlySelected = 0;
+  }
+  for(let i = 0; i < allSlides.length; i++) {
+    allSlides[i].classList.remove("active")
+  }
+  allSlides[currentlySelected].classList.add("active")
+}

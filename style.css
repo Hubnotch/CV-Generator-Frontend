@@ -419,7 +419,7 @@ section.testimonial-section .slider .slide {
 }
 section.testimonial-section .slider .slide.active {
     transform: scale(1);
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0, 0.8);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 section.testimonial-section .slider article .inner-row {
     display: flex;
