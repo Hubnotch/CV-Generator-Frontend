@@ -89,7 +89,7 @@
     padding: 10px;
     background: #fff;
     color: #888;
-    border:  groove;
+    border:  2px solid #ddd;
     border-radius: 6px;
     outline: none;
     box-shadow: none;
@@ -99,6 +99,13 @@
     float: right;
     left: 20px;
  }
+
+ 
+ input[type="submit"]{
+    outline: none;
+   border:none;
+ }
+
  section .container .user .formbox form input[type="submit"]
  {
     max-width: 330px;
@@ -121,16 +128,22 @@
     cursor: pointer;
     z-index: 2;
   }
-  .text {
-    padding-left: 225px;
-    padding-top: 0px;
-    padding-bottom: 1.5rem;
+  .far::after {
+     content: "";
+     clear: both;
+     display:table;
   }
- .text a{
+  p.text {
+    text-align:right;
+    margin: 8rem 0 1rem 0;
+  }
+ p.text a{
     text-decoration: none;
     color: #00aaff;
     font-size: 11px;
-    font-weight: 600;
+    font-weight: 600; 
+    margin:2.55rem 0;
+    padding-top: 0.4rem;
  }
  .text a:hover{
     text-decoration: none;
@@ -151,6 +164,61 @@
     text-decoration: none;
     color: #00aaff;
  }
+ aside.signup-intro {
+   background: #99d3f1;
+   color: #ffffff;
+   padding: 10% 2rem;
+   width: 100%;
+ }
  
+ h3.signup-intro-title {
+   line-height: 1.5rem;
+   padding-top: 2rem;
+   font-size: 1.35rem;
+   margin-bottom: 3rem;
+ }
  
+ p.signup-intro-text {
+   font-size: 0.7rem;
+ }
+ 
+ @media screen and (max-width:768px) {
+   aside.signup-intro {
+     display: none;
+   }
+
+   .far{
+      margin-right: -350px;
+    }
+ }
+ @media screen and (max-width: 425px) {
+    section {
+       position: static;
+    }
+   aside.signup-intro {
+     display: none;
+   }
+   .far{
+      margin-right: -290px;
+    }
+ }
+ @media screen and (max-width: 375px) {
+   section {
+      position: static;
+   }
+   aside.signup-intro {
+     display: none;
+   }
+   .far{
+      margin-right: -290px;
+    }
+ }
+ @media screen and (max-width: 320px) {
+   aside.signup-intro {
+     display: none;
+   }
+   .far{
+      margin-right: -290px;
+    }
+ }
   

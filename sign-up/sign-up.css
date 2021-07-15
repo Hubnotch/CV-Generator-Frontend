@@ -5,11 +5,14 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
  }
+ body, html {
+  height: 100%;
+}
+
  section
  {
     position: relative;
     min-height: 100vh;
-    background: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,7 +23,6 @@
     position: relative;
     width: 800px;
     height: 550px;
-    background: #fff;
     box-shadow: 0 15px 50px rgba(0,0,0,0.1);
     overflow: hidden;
  }
@@ -33,23 +35,7 @@
     height: 100%;
     display: flex;
  }
- section .container .user .imgbox
- {
-    position: relative;
-    width: 80%;
-    height: 100%;
-    background: ffO;
-    transition: 0.5s;
- }
- section .container .user .imgbox img
- {
-    position: absolute;
-    top: 0;
-    left: 20%;
-    width: 80%;
-    height: 100%;
-    object-fit: cover;
- }
+ 
  section .container .user .formbox
  {
     position: relative;
@@ -100,11 +86,15 @@
     padding: 0 50px;
     margin-top: 6px;
   }
+a.btn{
+   text-align: center;
+}
+
   input,
  .btn {
     position: relative;
     width: 120%;
-    padding: 8px;
+    padding: 1rem;
     border: none;
     border-radius: 4px;
     margin: 8px 0;
@@ -114,7 +104,6 @@
     font-weight: 300;
     line-height: 1px;
     text-decoration: none; 
-    padding-left: 72px;
   }
   input:hover,
   .btn:hover {
@@ -123,31 +112,32 @@
 
  .linkedin {
   background-color: #fff;
-  border: solid #55ACEE;
+  border: 2px solid #55ACEE;
   color: #55ACEE;
  }
 
  .facebook {
   background-color: #fff;
-  border: solid #3B5998;
+  border: 2px solid #3B5998;
   color: #3B5998;
  }
 
  .google {
   background-color: #fff;
-  border: solid #dd4b39;
+  border: 2px solid #dd4b39;
   color: #dd4b39;
  }
  section .container .user .formbox form input
  {
     position: relative;
     width: 80%;
+    height: 40px;
     left: 17%;
     padding: 6px;
     display: inline-block;
     background: #fff;
     color: #888;
-    border:  groove;
+    border:  2px solid #cccccc;
     border-radius: 6px;
     outline: none;
     box-shadow: none;
@@ -161,6 +151,8 @@
     max-width: 200%;
     height: 40px;
     left: 17%;
+     outline: none;
+    border: none;
     background: #379fff;
     color: #fff;
     cursor: pointer;
@@ -180,11 +172,10 @@
   }
   section .container .user .formbox form .signup
  {
-    position: relative;
     padding-top: 10px;
-    padding-left: 130px;
+    padding-left: 42px;
+     text-align: center;
     font-size: 12px;
-  
     color: #555;
     font-weight: 400;
     white-space: nowrap;
@@ -196,3 +187,91 @@
     color: #00aaff;
  }
  
+
+ div.container div.user aside.signup-intro {
+  background-image: url('/signup-background.png');
+  background: #99d3f1;
+  background-position: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 45%;
+  height: 100%;
+  color: #ffffff;
+  padding: 1rem;
+}
+
+h3.signup-intro-title {
+  padding-top: 2rem;
+  font-size: 1.6rem;
+  margin-bottom: 3rem;
+}
+
+p.signup-intro-text {
+  font-size: 0.7rem;
+}
+
+@media screen and (max-width: 768px) {
+  aside.signup-intro {
+    display: none;
+  }
+  section div.container {
+    display: flex;
+    width: 100%;
+    padding: 15px 10%;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+   section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+  section .container {
+    overflow: none;
+   position: static;
+ }
+ 
+section .container .user .formbox form input,
+section .container .user .formbox form input[type="submit"]
+ {
+    position: relative;
+    width: 88%;
+    height: 40px;
+    left: 13%;
+}
+}
+@media screen and (max-width: 425px) {
+  aside.signup-intro {
+    display: none;
+  }
+  section div.container {
+    display: flex;
+    width: 100%;
+    padding: 15px 10%;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+   section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+  section .container {
+    overflow: none;
+   position: static;
+ }
+ 
+section .container .user .formbox form input,
+section .container .user .formbox form input[type="submit"]
+ {
+    position: relative;
+    width: 75%;
+    height: 40px;
+    left: 18%;
+}
+}
